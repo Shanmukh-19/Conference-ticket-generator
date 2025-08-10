@@ -1,0 +1,22 @@
+<div class = "background-img">
+  <img src="background-desktop.png" alt="Background pic">
+  <div class="overlay-bottom">
+    <img src="pattern-squiggly-line-bottom-desktop.svg" alt="bottom pattern" class = "pattern-bottom">
+  </div>
+  <div class="overlay-top">
+    <img src="pattern-squiggly-line-top.svg" alt="top pattern" class="pattern-top">
+  </div>
+  <div class = "overlay-whole">
+    <img src="background-desktop.png" alt="scratch" class="scratch">
+  </div>
+  <app-validation-form
+    *ngIf="!showTicket"
+    (formSuccess)="handleFormSuccess($event)">
+  </app-validation-form>
+
+  <app-ticket
+    *ngIf="showTicket"
+    [userData]="ticketData"
+    [imageUrl]="ticketData?.imageUrl">
+  </app-ticket>
+</div>

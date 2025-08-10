@@ -1,0 +1,49 @@
+.background-img {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+.overlay-bottom{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  bottom: -45vh;
+  left: -10vw;
+}
+.overlay-top {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 10vh;
+  right: -70vw;
+}
+.overlay-whole{
+    position: absolute;
+    width: 95vw;
+    height: 100vh;
+    background-color: transparent;
+    top: 0;
+}
+.pattern-bottom {
+  width: 60vw;
+  height: auto;
+  display: block;
+  z-index: 3;
+  position: absolute;
+}
+.pattern-top {
+  width: 30vw;
+  height: auto;
+  display: block;
+  z-index: 3;
+  position: absolute;
+}
+.scratch{
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  z-index: 1;
+  object-fit: fill;
+}

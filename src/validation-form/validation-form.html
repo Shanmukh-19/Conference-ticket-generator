@@ -1,0 +1,62 @@
+<div class="content">
+  <img src="logo-full.svg" alt="logo">
+  <h1>Your Journey to Coding Conf 2025 Starts Here!</h1>
+  <p>Secure your spot at next year's biggest coding conference.</p>
+  <div class="container">
+    <form #loginForm="ngForm" (ngSubmit)="onSubmit(loginForm)">
+
+      <div class="upload-box">
+        <input type="file" #fileInput style="display: none" (change)="onFileSelected($event)">
+        <ng-container *ngIf="!previewUrl; else uploadedImage">
+          <div class="upload-icon" (click)="triggerFileDialog()">
+            <img src="icon-upload.svg" alt="upload">
+          </div>
+          <p>Drag and drop or click to upload</p>
+        </ng-container>
+        <ng-template #uploadedImage>
+          <div class="uploaded-preview">
+            <img [src]="previewUrl" alt="Uploaded Avatar" class="avatar-preview">
+            <div class="image-buttons">
+              <button type="button" class="btn-remove" (click)="removeImage()">Remove image</button>
+              <button type="button" class="btn-change" (click)="triggerFileDialog()">Change image</button>
+            </div>
+          </div>
+        </ng-template>
+      </div>
+
+      <div class="upload-info-row">
+        <img src="icon-info.svg" alt="icon-info" class="info-icon">
+        <span *ngIf="!fileSizeExceed" class="file-name">
+          Upload your photo (JPG or PNG, max size: 500KB).
+        </span>
+        <span *ngIf="fileSizeExceed" class="error">
+          File is too large. Please upload a photo under 500KB.
+        </span>
+      </div>
+
+      <div class="form-field">
+        <label for="name">Full Name</label>
+        <input type="text" id="name" name="name" required #name="ngModel" ngModel>
+      </div>
+
+      <div class="form-field">
+        <label for="email">Email Address</label>
+        <input type="email" id="email" name="email" required #email="ngModel" ngModel>
+        <div *ngIf="isInvalidEmail" class="error-row">
+          <img src="icon-info.svg" alt="icon-info" class="info-icon">
+          <span>Please enter a valid email address.</span>
+        </div>
+      </div>
+
+      <div class="form-field">
+        <label for="GitHub">GitHub Username</label>
+        <input type="text" id="GitHub" name="GitHub" required #github="ngModel" ngModel>
+      </div>
+
+      <button
+        [disabled]="!fileSelected || !name.valid || !email.valid || !github.valid">
+        Generate My Ticket
+      </button>
+    </form>
+  </div>
+</div>

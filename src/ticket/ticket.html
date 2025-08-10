@@ -1,0 +1,34 @@
+<div class="content">
+  <img src="logo-full.svg" alt="logo" class="page-logo">
+
+  <h1>Congrats, {{ userData?.name }}!</h1>
+  <h1>Your ticket is ready.</h1>
+
+  <p>
+    We've emailed your ticket to <strong>{{ userData?.email }}</strong> and will send updates in the run up to the event.
+  </p>
+
+  <div class="ticket-wrapper">
+    <!-- Ticket background -->
+    <img src="pattern-ticket.svg" alt="ticket background" class="ticket-bg">
+
+    <!-- Overlay info -->
+    <div class="ticket-info">
+      <div class="ticket-header">
+        <img src="logo-full.svg" alt="logo" class="logo-ticket">
+        <p>Jan 31, 2025 / Austin, TX</p>
+      </div>
+
+      <div class="ticket-details">
+        <img [src]="imageUrl" alt="User image" class="avatar">
+        <div>
+          <p class="name">{{ userData?.name }}</p>
+          <div class="social">
+            <img src="icon-github.svg" alt="github" class="icon-github">
+            <p class="email">@{{ userData?.email }}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

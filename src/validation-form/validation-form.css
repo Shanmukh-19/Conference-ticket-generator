@@ -1,0 +1,134 @@
+.content{
+    margin-top: 20px;
+    position: absolute;
+    height: 100vh;
+    width: auto;
+    top: 50vh;
+    bottom: 0vh;
+    left: 50vw;
+    overflow: hidden;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white;
+    z-index: 999;
+}
+
+.container{
+  position: relative;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.upload-box {
+  border: 2px dashed #7a7878;
+  border-radius: 16px;
+  padding: 32px 16px;
+  background: rgba(30, 20, 60, 0.7);
+  text-align: center;
+  margin-bottom: 24px;
+  position: relative;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+/* Image preview inside same box */
+.uploaded-preview {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.upload-box:hover {
+  background: rgba(50, 30, 80, 0.8);
+}
+
+.upload-box input[type="file"] {
+  display: none; /* hides default file input */
+}
+
+.avatar-preview {
+  width: 80px;
+  height: 80px;
+  border-radius: 10%;
+  object-fit: cover;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.image-buttons {
+  display: flex;
+  gap: 10px;
+}
+
+.image-buttons button {
+  padding: 6px 12px;
+  border-radius: 6px;
+  font-size: 0.85rem;
+  border: none;
+  cursor: pointer;
+}
+
+.btn-remove {
+  background: red;
+  border: 1px solid black;
+  color: #fff;
+}
+
+.btn-change {
+  background: #444;
+  color: #fff;
+}
+
+.upload-icon {
+  width: 32px;
+  height: 32px;
+  margin-bottom: 8px;
+  background-color: #7a7878;
+  border: 1px solid #bdbaba70;
+  border-radius: 20%;
+  padding: 6px;
+  display: inline-block;
+}
+
+.upload-info {
+  display: inline-block;
+  margin-top: 2px;
+  align-items: center;
+  gap: 6px;
+  color: #7a7878;
+  font-size: 0.95rem;
+  text-align: left;
+}
+label {
+  display: block;
+  text-align: left;
+  font-weight: 500;
+  margin-bottom: 6px;
+}
+.error {
+  color: #ff6b6b;
+  font-size: 0.95rem;
+  margin-top: 8px;
+  display: block;
+}
+input[type="text"], input[type="email"] {
+  width: 95%;
+  padding: 12px;
+  border-radius: 8px;
+  border: none;
+  margin-bottom: 16px;
+  background: #1a1333;
+  color: #fff;
+  font-size: 1rem;
+}
+button {
+  width: 100%;
+  padding: 14px;
+  border-radius: 8px;
+  background: #ff6b6b;
+  color: #fff;
+  font-weight: bold;
+  border: none;
+  font-size: 1.1rem;
+}
