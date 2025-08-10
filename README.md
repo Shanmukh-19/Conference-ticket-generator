@@ -39,8 +39,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://www.frontendmentor.io/challenges/conference-ticket-generator-oq5gFIU12w?tab=solutions)
-- Live Site URL: [Add live site URL here](https://shanmukh-19.github.io/Conference-ticket-generator/)
+- Solution URL: [Conference Ticket Generator](https://www.frontendmentor.io/challenges/conference-ticket-generator-oq5gFIU12w?tab=solutions)
+- Live Site URL: [Conference Ticket Generator](https://shanmukh-19.github.io/Conference-ticket-generator/)
 
 ## My process
 
